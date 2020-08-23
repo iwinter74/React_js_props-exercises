@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Faq from './Exercises/FAQ/Faq';
+import Counter from './Exercises/Counter';
+import MoviesList from './Exercises/Movies/MoviesList';
+import FaqList from './Exercises/FAQ/FaqList';
+import Schalter from './Schalter/Schalter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state = {  }
+    render() { 
+        return (
+            <section className="App">
+                <Faq />
+                <Counter />
+                <MoviesList />
+                <FaqList />
+                {/* <Faq1 /> */}
+                <Schalter />
+            </section>
+          );
+    }
 }
-
+ 
 export default App;

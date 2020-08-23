@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  color:#000;
+  background: #fff;
+}
+img{
+  width: 200px;
+}
+section{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+}
+section div{
+  background: #f3f3f3;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+.dark{
+  text-align: center;
+  color:red;
+  background: blue;
+}
+
+button {
+height: 150px;
+width: 150px;
+border-radius: 50%;
+border: 1px solid black;
+margin-top: 3em
+}
+.black-white {
+  background: linear-gradient(-45deg, black 50%, white 50%);
+}
+.blue-red {
+background: linear-gradient(-45deg, darkred 50%, darkblue 50%);
+}
