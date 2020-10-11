@@ -79,41 +79,41 @@ class MoviesList extends Component {
         })
         this.setState({ data:movies  });
     }
-    formTitle = (e) => {
-        this.setState({ title: e.target.value });
-    }
-    formYear = (e) => {
-        this.setState({ year: e.target.value });
-    }
-    formRate = (e) => {
-        this.setState({ rate: e.target.value });
-    }
-    formDuration = (e) => {
-        this.setState({ duration: e.target.value });
-    }
-    formDirector = (e) => {
-        this.setState({ director: e.target.value });
-    }
-    formGenre = (e) => {
-        this.setState({ genre: e.target.value }, () => {
-            if (this.state.genreArr.indexOf(this.state.genre) === -1) {
-                this.state.genreArr.push(this.state.genre)
-            }
-        });
-    }
-    handleSubmit = (event) => {
-        const movies = this.state.data.unshift({
-            title: this.state.title,
-            year: this.state.year,
-            rate: this.state.rate,
-            director: this.state.director,
-            genre: this.state.genreArr,
-            duration: this.state.duration
+    // formTitle = (e) => {
+    //     this.setState({ title: e.target.value });
+    // }
+    // formYear = (e) => {
+    //     this.setState({ year: e.target.value });
+    // }
+    // formRate = (e) => {
+    //     this.setState({ rate: e.target.value });
+    // }
+    // formDuration = (e) => {
+    //     this.setState({ duration: e.target.value });
+    // }
+    // formDirector = (e) => {
+    //     this.setState({ director: e.target.value });
+    // }
+    // formGenre = (e) => {
+    //     this.setState({ genre: e.target.value }, () => {
+    //         if (this.state.genreArr.indexOf(this.state.genre) === -1) {
+    //             this.state.genreArr.push(this.state.genre)
+    //         }
+    //     });
+    // }
+    // handleSubmit = (event) => {
+    //     const movies = this.state.data.unshift({
+    //         title: this.state.title,
+    //         year: this.state.year,
+    //         rate: this.state.rate,
+    //         director: this.state.director,
+    //         genre: this.state.genreArr,
+    //         duration: this.state.duration
 
-        })
-        this.setState({ data: movies });
-        event.preventDefault();
-    }
+    //     })
+    //     this.setState({ data: movies });
+    //     event.preventDefault();
+    // }
 
     render() { 
         return ( 
@@ -125,7 +125,7 @@ class MoviesList extends Component {
                 <button onClick={this.handleAlphabet1}>Z-A</button>
                 <button onClick={this.sortByAction}>Sort by Action</button>
 
-                <form action="" >
+                {/* <form action="" >
                         <input type="text" onChange={this.formTitle} placeholder="title" />
                         <input type="text" onChange={this.formYear} placeholder="year" />
                         <input type="text" onChange={this.formDuration} placeholder="duration" />
@@ -138,7 +138,7 @@ class MoviesList extends Component {
                             <option value="thriller">Thriller</option>
                     </select>
                     <input type="button" value="Submit" onClick={this.handleSubmit} />
-                    </form>
+                    </form> */}
 
             <section id="grid">
                 {this.state.data.map((movie, i) => 
